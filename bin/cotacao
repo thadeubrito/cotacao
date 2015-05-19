@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'cotacao'
+
+cotacao = Cotacao::Cotacao.new
+
+puts cotacao.now
