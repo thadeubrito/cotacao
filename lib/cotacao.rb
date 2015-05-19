@@ -1,5 +1,9 @@
 require "cotacao/version"
 
+
 module Cotacao
-  # Your code goes here...
+  class Cotacao
+    def now
+    end
+  end
 end
