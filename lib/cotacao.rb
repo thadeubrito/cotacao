@@ -8,11 +8,11 @@ module Cotacao
     def initialize
       apiUrl = 'http://developers.agenciaideias.com.br/cotacoes/json'
       response = HTTParty.get(apiUrl)
-      @quotations = JSON.parse(response.body)
+      @cotacoes = JSON.parse(response.body)
     end
 
     def now
-      puts @quotations["dolar"]["cotacao"]
+      puts "Dolar: R$ #{@cotacoes['dolar']['cotacao']} - Variação: #{@cotacoes['dolar']['variacao']}"
     end
   end
 end
