@@ -1,6 +1,5 @@
 # Cotacao
 
-TODO: Write a gem description
 
 ## Installation
 
@@ -20,7 +19,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ cotacao
+    #~> Dolar: R$ 3.0380 - Variação: +0.60
 
 ## Contributing
 
