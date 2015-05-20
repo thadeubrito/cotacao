@@ -5,3 +5,5 @@ gemspec
 
 gem 'json'
 gem 'httparty'
+gem 'colorize'
+gem 'pry'
