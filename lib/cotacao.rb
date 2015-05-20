@@ -2,7 +2,6 @@ require "cotacao/version"
 require 'httparty'
 require 'json'
 require 'colorize'
-require 'pry'
 
 module Cotacao
   class Cotacao
