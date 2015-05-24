@@ -4,4 +4,14 @@ require 'cotacao'
 
 cotacao = Cotacao::Cotacao.new
 
-puts cotacao.now
+if ARGV.empty?
+  puts cotacao.now
+end
+
+if ARGV[0] == 'dolar'
+  unless ARGV[1]
+    puts cotacao.dolar
+  else
+    puts cotacao.dolar(ARGV[1])
+  end
+end

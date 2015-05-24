@@ -13,9 +13,22 @@ module Cotacao
     end
 
     def now
-      self.console_print('dolar', @data['dolar'], "Dolar: R$ #{@data['dolar']['cotacao']} - Variação: #{@data['dolar']['variacao']}")
+      self.dolar(nil)
       self.console_print('euro', @data['euro'], "Euro: R$ #{@data['euro']['cotacao']} - Variação: #{@data['euro']['variacao']}")
       self.console_print('bovespa', @data['bovespa'], "Bovespa: #{@data['bovespa']['cotacao']} - Variação: #{@data['bovespa']['variacao']}")
+    end
+
+    def dolar(convert_to)
+      dolar             = @data['dolar']
+      cotacao           = dolar['cotacao']
+      variacao          = dolar['variacao']
+      convertion_string = ''
+
+      if convert_to
+        convertion_string = "- Em Reais: R$ #{self.convert(cotacao, convert_to)}"
+      end
+
+      self.console_print('dolar', dolar, "Dolar: R$ #{cotacao} - Variação: #{variacao} #{convertion_string}")
     end
 
     def console_print(type, cotacao, copy)
@@ -42,6 +55,10 @@ module Cotacao
       elsif variation_status == 'negative'
         "  ↓↓ #{copy} ↓↓".red
       end
+    end
+
+    def convert(foreign_currency, real)
+      '%.2f' % (real.to_f * foreign_currency.to_f)
     end
 
   end
