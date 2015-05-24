@@ -21,6 +21,10 @@ Or install it yourself as:
 
     $ cotacao
     #~> Dolar: R$ 3.0380 - Variação: +0.60
+    #~> Euro: R$ 3.3450 - Variação: +0.30
+
+    $ cotacao dolar 1000.00
+    #~> Dolar: R$ 3.0380 - Variação: +0.60 - Em Reais: R$ 3038.00
 
 ## Contributing
 
