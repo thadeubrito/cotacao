@@ -10,7 +10,7 @@ end
 
 if ARGV[0] == 'dolar'
   unless ARGV[1]
-    puts cotacao.dolar
+    puts cotacao.dolar(nil)
   else
     puts cotacao.dolar(ARGV[1])
   end
